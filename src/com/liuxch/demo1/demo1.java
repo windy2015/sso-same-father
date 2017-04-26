@@ -56,12 +56,14 @@ public class demo1 extends HttpServlet {
 		// HttpSession session = request.getSession();
 		// session.setAttribute("gotourl",
 		// "http://demo1.x.com:8080/sso_same_father/demo1.jsp");
-
+		//通过cookie来存储，会影响下次登陆
+                /**
 		Cookie urlcookie = new Cookie("gotourl",
 				"http://demo1.x.com:8080/sso_same_father/demo1.jsp");
 		urlcookie.setDomain(".x.com");
 		urlcookie.setPath("/");
-		response.addCookie(urlcookie);
+		response.addCookie(urlcookie);**/
+		
 		response.sendRedirect("http://check.x.com:8080/sso_same_father/login.jsp");
 
 	}
